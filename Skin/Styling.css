@@ -9,14 +9,16 @@ header {
   justify-content: center;
   align-items: center;
   border: 3px solid gray;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   font-family: sans-serif;
   font-weight: bold;
 }
 
 header h2:hover {
-  color: rgb(5, 44, 201);
+  /* color: rgb(229, 164, 172); */
+  text-shadow: 2px 2px 3px gray;
+  color: chocolate;
 }
 
 main {
@@ -30,7 +32,7 @@ main {
   flex-direction: column;
   align-items: center;
   width: 40vw;
-  height: 70vh;
+  height: 75vh;
   border: 3px dashed rgb(44, 197, 44);
   margin: 20px;
 }
@@ -43,9 +45,13 @@ main {
   margin-bottom: 10px;
 }
 
+.container1 h2:hover{
+  text-shadow: 1px 1px 2px ;
+}
+
 .container1 h4 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  margin: 15px;
+  margin: 10px;
   font-size: large;
   font-style: italic;
 }
@@ -55,6 +61,7 @@ main {
   text-decoration: none;
   width: 160px;
   height: 30px;
+  /* padding: 8px; */
   background: rgb(rgb(155, 64, 64), rgb(51, 152, 51), rgb(51, 51, 111));
   border: none;
   cursor: pointer;
@@ -66,6 +73,7 @@ main {
 .container1 button:hover {
   background-color: rgba(0, 0, 0, 0.541);
   color: white;
+  text-shadow: 2px 2px 5px ;
 }
 
 .container1 p {
@@ -74,16 +82,48 @@ main {
   justify-content: space-evenly;
 }
 
+.container1 .result{
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+}
+
+.container1 .result h3{
+  display: flex;
+  margin: 15px;
+  color: rgb(228, 93, 8);
+}
+
+.container1 .result p{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+}
+
+.container1 #card{
+  display: flex;
+}
+
+.container1 .reset{
+  background-color: rgb(97, 229, 31);
+  font-family: monospace;
+  font-size: larger;
+}
+
+.container1 .reset:hover{
+  background-color: rgb(229, 79, 79);
+}
+
 .container1 #tutorial {
   width: 100px;
   height: 30px;
   text-decoration: none;
   margin: 15px;
+  background-color: bisque;
   margin-left: 50px;
 }
 
 .container1 #tutorial:hover {
-  background-color: rgba(133, 191, 102, 0.879);
+  background-color: rgba(63, 156, 214, 0.879);
   color: rgb(246, 246, 250);
 }
 
@@ -91,19 +131,19 @@ main {
   /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   margin: 15px;
-  margin-top: 5px;
   font-size: large;
   font-style: italic;
 }
 
 .container1 .conclusion {
-  height: 10vh;
+  height: 160px;
   overflow-y: auto;
 }
 
 .container1 .conclusion h3{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 
 /* Styling Stone-Paper-Scissor Game */
 
@@ -112,7 +152,7 @@ main {
   flex-direction: column;
   align-items: center;
   width: 45vw;
-  height: 70vh;
+  height: 75vh;
   border: 3px solid rgb(92, 16, 214);
   margin: 20px;
 }
