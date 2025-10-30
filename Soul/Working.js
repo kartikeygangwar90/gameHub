@@ -76,3 +76,40 @@ trialPlayed.addEventListener("click", function (){
     },10000);
     div.append(res);
 });
+
+
+// Lets move to a New Game Tic-tac-toe Game ----
+
+
+
+// 
+let O=document.querySelector("#O");
+let X=document.querySelector("#X");
+
+let btn=document.querySelectorAll(".choice");
+
+let firstMove;
+
+O.addEventListener("click", function (){
+    firstMove="O";
+    console.log(firstMove);
+    btn.forEach(btn=>{
+        btn.disabled=true;
+        btn.style.backgroundColor="rgb(37, 61, 53)"
+        btn.style.color="red"
+    })
+});
+
+X.addEventListener("click", function (){
+    firstMove="X";
+    console.log(firstMove);
+    btn.forEach(btn=>{
+        btn.disabled=true;
+        btn.style.backgroundColor="rgb(37, 61, 53)"
+        btn.style.color="red"
+    })
+});
+
+btn.disabled=false
+
+
