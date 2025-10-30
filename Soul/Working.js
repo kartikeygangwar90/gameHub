@@ -88,28 +88,55 @@ let X=document.querySelector("#X");
 
 let btn=document.querySelectorAll(".choice");
 
-let firstMove;
-
+let firstMove="";
+let nextMove="";
 O.addEventListener("click", function (){
     firstMove="O";
+    nextMove="X"
     console.log(firstMove);
     btn.forEach(btn=>{
         btn.disabled=true;
         btn.style.backgroundColor="rgb(37, 61, 53)"
         btn.style.color="red"
+        displayVal()     //function defined below to print the choice of the player
     })
 });
 
 X.addEventListener("click", function (){
     firstMove="X";
+    nextMove="O"
     console.log(firstMove);
     btn.forEach(btn=>{
         btn.disabled=true;
         btn.style.backgroundColor="rgb(37, 61, 53)"
         btn.style.color="red"
+        displayVal()     //function defined below to print the choice of the player
     })
 });
 
 btn.disabled=false
+function displayVal(){
+    let btns=document.querySelectorAll(".gameBox button")
+    let count=0;
+    btns.forEach(btn=>{
+        btn.addEventListener("click", function (){
+        if(count%2==0){
+            btn.innerHTML=firstMove;
+            count++
+            btn.disabled=true;    // to make sure that the value once assigned by player will not changed
+            btn.style.backgroundColor="rgb(114, 151, 231)"
+            btn.style.color="white"
+        }
+        else {
+            btn.innerHTML=nextMove;
+            count++
+            btn.disabled=true;    // to make sure that the value once assigned by player will not changed
+            btn.style.backgroundColor="rgb(114, 151, 231)"
+            btn.style.color="white"
+        }
+        })
+    
+    })
 
+}
 
