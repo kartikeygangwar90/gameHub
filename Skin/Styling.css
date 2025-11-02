@@ -208,13 +208,13 @@ main {
 .styleBox{
   height: 54vh;
   /* height: 330px; */
-  width: 50vh;
+  width: 60vh;
   /* width: 330px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px solid black;
+  /* border: 3px solid black; */
   /* position:relative */
 }
 
@@ -222,7 +222,7 @@ main {
   height: 300px;
   width: 300px;
   display: flex;
-  border: 3px solid black;
+  /* border: 3px solid black; */
   margin-bottom: 3px;
 }
 
@@ -264,4 +264,19 @@ main {
   /* background-color: rgb(114, 151, 231); */
 
   color: black;
+}
+
+.footer .reset2{
+  background-color: rgb(97, 229, 31);
+  font-family: monospace;
+  font-size: larger;
+  border-radius: 5px;
+  padding: 10px;
+  width: 90px;
+  margin-top: 15px;
+}
+
+.footer .reset2:hover{
+  border-radius: 10px;
+  background-color: rgb(229, 79, 79);
 }
