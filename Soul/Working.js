@@ -89,6 +89,13 @@ let X=document.querySelector("#X");
 let btn=document.querySelectorAll(".choice");
 let firstMove="";
 let nextMove="";
+start();
+let originalContent = document.getElementsByClassName("turnBox").innerHTML;
+
+// O.disabled=false
+// X.disabled=false
+
+function start(){
 
 O.addEventListener("click", function (){
     firstMove="O";
@@ -111,6 +118,8 @@ X.addEventListener("click", function (){
         displayVal()     //function defined below to print the choice of the player
     })
 });
+
+}
 
 btn.disabled=false
 let btns=document.querySelectorAll(".gameBox button")
@@ -328,5 +337,15 @@ function conclusion(){
         btn.disabled = true;
         btn.style.backgroundColor = "";
         btn.style.color = "";
-    });
+         O.disabled = false;
+         X.disabled = false;
+        });
+         let turnDisplay = document.querySelector(".turnBox");
+        if (turnDisplay) turnDisplay.innerHTML = originalContent;
+
+        let conclusion = document.querySelector(".conclusion");
+        if (conclusion) conclusion.innerHTML = "";
+        turnDisplay.appendChild(concShow)
+        start();
+    // displayVal();
     })
